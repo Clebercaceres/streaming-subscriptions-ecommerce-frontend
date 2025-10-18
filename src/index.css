@@ -1,0 +1,351 @@
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 94.1%;
+}
+
+/* eslint-disable-next-line @tailwindcss/unknown-at-rules */
+@tailwind base;
+/* eslint-disable-next-line @tailwindcss/unknown-at-rules */
+@tailwind components;
+/* eslint-disable-next-line @tailwindcss/unknown-at-rules */
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  /* Modo oscuro */
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  /* Componentes personalizados en modo oscuro */
+  .dark .bg-white {
+    @apply bg-gray-800;
+  }
+
+  .dark .text-gray-900 {
+    @apply text-gray-100;
+  }
+
+  .dark .text-gray-800 {
+    @apply text-gray-200;
+  }
+
+  .dark .text-gray-700 {
+    @apply text-gray-300;
+  }
+
+  .dark .text-gray-600 {
+    @apply text-gray-400;
+  }
+
+  .dark .border-gray-200 {
+    @apply border-gray-700;
+  }
+
+  .dark .border-gray-300 {
+    @apply border-gray-600;
+  }
+
+  .dark .hover\:bg-gray-50:hover {
+    @apply hover:bg-gray-800;
+  }
+
+  /* Sidebar en modo oscuro */
+  .dark .sidebar-bg {
+    @apply bg-gray-800;
+  }
+
+  /* Página de checkout en modo oscuro */
+  .dark .ant-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .dark .ant-form-item-label > label {
+    @apply text-gray-200;
+  }
+
+  .dark .ant-input {
+    @apply bg-gray-700 border-gray-600 text-gray-200;
+  }
+
+  .dark .ant-input::placeholder {
+    @apply text-gray-400;
+  }
+
+  .dark .ant-select-selector {
+    @apply bg-gray-700 border-gray-600;
+  }
+
+  .dark .ant-select-selection-item {
+    @apply text-gray-200;
+  }
+
+  .dark .ant-statistic-title {
+    @apply text-gray-400;
+  }
+
+  .dark .ant-statistic-content-value {
+    @apply text-white;
+  }
+
+  /* Página del carrito en modo oscuro mejorado */
+  .dark .ant-empty-description {
+    @apply text-gray-400;
+  }
+
+  .dark .ant-btn-danger {
+    @apply bg-red-600 border-red-600 hover:bg-red-700;
+  }
+
+  /* Mejorar contraste en modo oscuro */
+  .dark .ant-btn-text:hover {
+    @apply bg-gray-700;
+  }
+
+  .dark .ant-card-hoverable:hover {
+    @apply border-primary;
+  }
+
+  .dark .ant-divider {
+    @apply border-gray-600;
+  }
+
+  /* Estilos globales para scrollbars personalizados */
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-400;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) rgb(243 244 246); /* thumb track */
+  }
+
+  .dark * {
+    scrollbar-color: rgb(107 114 128) rgb(55 65 81); /* thumb track */
+  }
+
+  /* Área específica del resumen del pedido */
+  .order-summary-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+  }
+
+  .dark .order-summary-scroll {
+    scrollbar-color: rgb(107 114 128) rgb(55 65 81);
+  }
+
+  .order-summary-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .order-summary-scroll::-webkit-scrollbar-track {
+    @apply bg-gray-50 dark:bg-gray-800 rounded-full;
+  }
+
+  .order-summary-scroll::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 dark:bg-gray-600 rounded-full;
+  }
+
+  .order-summary-scroll::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-300 dark:bg-gray-500;
+  }
+
+  /* Formulario de checkout en modo oscuro */
+  .dark .checkout-form .ant-form-item-label > label {
+    @apply text-gray-200;
+  }
+
+  .dark .checkout-form .ant-input {
+    @apply bg-gray-700 border-gray-600 text-gray-200;
+  }
+
+  .dark .checkout-form .ant-input::placeholder {
+    @apply text-gray-400;
+  }
+
+  .dark .checkout-form .ant-select-selector {
+    @apply bg-gray-700 border-gray-600;
+  }
+
+  .dark .checkout-form .ant-select-selection-item {
+    @apply text-gray-200;
+  }
+
+@layer components {
+  /* Estilos adicionales para componentes personalizados */
+  .theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  /* Estilos para menú móvil */
+  .mobile-menu-drawer .ant-drawer-body {
+    @apply p-0;
+  }
+
+  .mobile-menu-drawer .ant-drawer-header {
+    @apply border-b border-gray-200 dark:border-gray-700 mb-0;
+  }
+
+  /* Mejorar el scroll del menú móvil */
+  .mobile-menu-drawer .ant-drawer-content {
+    @apply bg-white dark:bg-gray-800;
+  }
+
+  .mobile-menu-drawer .ant-drawer-body::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .mobile-menu-drawer .ant-drawer-body::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-700;
+  }
+
+  .mobile-menu-drawer .ant-drawer-body::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-500 rounded-full;
+  }
+
+  .mobile-menu-drawer .ant-drawer-body::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-400;
+  }
+
+  /* Estilos para componentes flotantes */
+  .floating-cart-card {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+
+  .floating-cart-card .ant-card-body {
+    @apply bg-white dark:bg-gray-800;
+  }
+
+  /* Ícono flotante del carrito */
+  .floating-cart-container {
+    position: fixed;
+    bottom: 100px; /* Más separado del botón de WhatsApp */
+    right: 24px;
+    z-index: 50;
+  }
+
+  .floating-cart-icon {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3) !important;
+  }
+
+  .floating-cart-icon:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4) !important;
+  }
+
+  /* Botón flotante de WhatsApp */
+  .whatsapp-float-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 50;
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-float-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    /* Ocultar elementos específicos de desktop en móvil */
+    .desktop-only {
+      @apply hidden;
+    }
+
+    /* Ajustes de padding para móvil */
+    .mobile-content {
+      @apply px-4 py-2;
+    }
+  }
+
+  /* Mejoras para tablets (md breakpoint) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .mobile-menu-drawer {
+      width: 320px !important;
+    }
+  }
+}
+}
