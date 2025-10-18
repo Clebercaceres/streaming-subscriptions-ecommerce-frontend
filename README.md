@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Guía de Desarrollo - Plataforma de Streaming
 
 ## 🚀 Inicio Rápido
@@ -302,3 +303,7 @@ Para preguntas o problemas:
 ---
 
 **¡Feliz desarrollo! 🚀**
+=======
+# streaming-subscriptions-ecommerce-frontend
+🛒Plataforma de  E-commerce
+>>>>>>> cbd148999f9bb4331a8063ea5c3cb154f3690669
